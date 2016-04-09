@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body ng-app="kottansApp">
+      
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="header">
+        <div class="container">
+            <h1>Pokedex</h1>
+        </div>
+    </div>
+
+      <div class="container" ng-controller="pokemonsController">
+          <div class="pokemon" ng-repeat="pokemon in pokemons" ng-if="showAllPokemons"> 
+              <div class="inner"  ng-repeat="(key, val) in pokemon">
+                <img ng-src="http://pokeapi.co/media/img/{{val.national_id}}.png" ng-click="choosePokemon(val.national_id)">
+                <h2>{{val.name}}</h2>
+                <p class="type" 
+                                ng-class="{fire: (val.types[0].name == 'fire'),
+                                          grass: (val.types[0].name == 'grass'),
+                                          poison: (val.types[0].name == 'poison'),
+                                          electric: (val.types[0].name == 'electric'),
+                                          bug: (val.types[0].name == 'bug'),
+                                          normal: (val.types[0].name == 'normal'),
+                                          water: (val.types[0].name == 'water'),
+                                          flying: (val.types[0].name == 'flying'),
+                                          ground: (val.types[0].name == 'ground'),
+                                          fairy: (val.types[0].name == 'fairy'),
+                                          rock: (val.types[0].name == 'rock'),
+                                          steel: (val.types[0].name == 'steel'),
+                                          psychic: (val.types[0].name == 'psychic'),
+                                          dragon: (val.types[0].name == 'dragon'),
+                                          ice: (val.types[0].name == 'ice'),
+                                          dark: (val.types[0].name == 'dark'),
+                                          ghost: (val.types[0].name == 'ghost'),
+                                          fighting: (val.types[0].name == 'fighting')
+                                          }">{{val.types[0].name | capitalize}}</p>
+                <p class="type" 
+                                ng-class="{fire: (val.types[1].name == 'fire'),
+                                          grass: (val.types[1].name == 'grass'),
+                                          poison: (val.types[1].name == 'poison'),
+                                          electric: (val.types[1].name == 'electric'),
+                                          bug: (val.types[1].name == 'bug'),
+                                          normal: (val.types[1].name == 'normal'),
+                                          water: (val.types[1].name == 'water'),
+                                          flying: (val.types[1].name == 'flying'),
+                                          ground: (val.types[1].name == 'ground'),
+                                          fairy: (val.types[1].name == 'fairy'),
+                                          rock: (val.types[1].name == 'rock'),
+                                          steel: (val.types[1].name == 'steel'),
+                                          ice: (val.types[1].name == 'ice'),
+                                          ghost: (val.types[1].name == 'ghost'),
+                                          dark: (val.types[1].name == 'dark'),
+                                          dragon: (val.types[1].name == 'dragon'),
+                                          psychic: (val.types[1].name == 'psychic'),
+                                          fighting: (val.types[1].name == 'fighting')
+                                          }">{{val.types[1].name | capitalize}}</p> 
+                
+              </div>
+          </div>
+          <div class="single-pokemon" ng-if="showPokemon">
+              <img ng-src="http://pokeapi.co/media/img/{{singlePokemon.national_id}}.png">
+              <p>{{singlePokemon.name}} #{{singlePokemon.national_id | digits}}</p> 
+              <table align="center">
+                  <tr>
+                    <td>Type</td>
+                    <td>{{singlePokemon.types[0].name | capitalize}} {{singlePokemon.types[1].name | capitalize}}</td>
+                  </tr>
+                  <tr>
+                    <td>Attack</td>
+                    <td>{{singlePokemon.attack}}</td>
+                  </tr>
+                  <tr>
+                    <td>Defense</td>
+                    <td>{{singlePokemon.defense}}</td>
+                  </tr>
+                  <tr>
+                    <td>HP</td>
+                    <td>{{singlePokemon.hp}}</td>
+                  </tr>
+                  <tr>
+                    <td>SP Attack</td>
+                    <td>{{singlePokemon.sp_atk}}</td>
+                  </tr>
+                   <tr>
+                    <td>SP Defense</td>
+                    <td>{{singlePokemon.sp_def}}</td>
+                  </tr>
+                   <tr>
+                    <td>Speed</td>
+                    <td>{{singlePokemon.speed}}</td>
+                  </tr>
+                   <tr>
+                    <td>Weight</td>
+                    <td>{{singlePokemon.weight}}</td>
+                  </tr>
+                  <tr>
+                    <td>Total moves</td>
+                    <td>{{singlePokemon.moves.length}}</td>
+                  </tr>
+              </table>
+          </div>
+          <button ng-click="loadMore()">Load More</button>
+      </div>
+
+<!--
+    <div class="footer">
+      <div class="container">
+      </div>
+    </div>
+-->
+
+
+        <script src="../bower_components/angular/angular.min.js"></script>
+        <script src="../bower_components/angular-route/angular-route.min.js"></script>
+        <script src="../bower_components/angular-resource/angular-resource.min.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/controllers.js"></script>
+        <script src="scripts/controllers/services.js"></script>
+
+</body>
+</html>

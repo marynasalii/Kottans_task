@@ -1,0 +1,307 @@
+body {
+    padding: 0;
+    margin: 0;  
+}
+h2{
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+}
+h1{
+    border: 1px solid #000;
+    padding: 2px 80px;
+    display: inline-block;
+    text-align: center;
+    font-size: 40px !important;
+}
+.container{
+/*    width: 800px;*/
+    width: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.container:after{
+    content: '';
+    height: 0;
+    clear: both;
+}
+.pokemon{
+/*    width: 520px;*/
+    width: 52%;
+    overflow: hidden;
+    float: left;
+}
+.pokemon:first-of-type{
+    display: none;
+}
+.pokemon:after{
+    content: '';
+    height: 0;
+    clear: both;
+}
+.pokemon .inner{
+    width: 150px;
+    height: 195px;
+    float: left;
+    margin-right: 20px;
+    border: 1px solid #000;
+    margin-top: 10px;
+}
+.pokemon .inner img{
+    margin: 0 auto;
+    display: block;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+button{
+/*    width: 500px;*/
+    width: 49%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    color: #fff;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer; 
+    font: 18px bold;
+    float: left;
+}
+p.type{
+    padding: 2px 8px;
+    margin: 0;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 8px;
+    float: left;
+    margin-left: 10px;
+}
+.fire{
+    background: #f4b1b0; /* Old browsers */
+    background: -moz-linear-gradient(top, #f4b1b0 17%, #f47573 60%, #f45350 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #f4b1b0 17%,#f47573 60%,#f45350 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #f4b1b0 17%,#f47573 60%,#f45350 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4b1b0', endColorstr='#f45350',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #F23E3E;
+}
+.grass{
+/*    border: 2px solid rgb(163,198,141);*/
+    background: #cde4c8; /* Old browsers */
+    background: -moz-linear-gradient(top, #cde4c8 17%, #b6dba6 50%, #a0d386 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cde4c8 17%,#b6dba6 50%,#a0d386 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #cde4c8 17%,#b6dba6 50%,#a0d386 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cde4c8', endColorstr='#a0d386',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #80D155;
+
+}
+.poison{
+    background: #cbaadd; /* Old browsers */
+    background: -moz-linear-gradient(top, #cbaadd 17%, #bb7cdd 60%, #ae56dd 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cbaadd 17%,#bb7cdd 60%,#ae56dd 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #cbaadd 17%,#bb7cdd 60%,#ae56dd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbaadd', endColorstr='#ae56dd',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #854AA5;
+}
+.electric{
+    background: #ffedb8; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffedb8 17%, #ffe293 60%, #ffd666 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffedb8 17%,#ffe293 60%,#ffd666 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffedb8 17%,#ffe293 60%,#ffd666 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffedb8', endColorstr='#ffd666',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #EABF48;
+}
+.ground{
+    background: #876f5b; /* Old browsers */
+    background: -moz-linear-gradient(top, #876f5b 0%, #876b55 46%, #875d3b 60%, #875227 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #876f5b 0%,#876b55 46%,#875d3b 60%,#875227 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #876f5b 0%,#876b55 46%,#875d3b 60%,#875227 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#876f5b', endColorstr='#875227',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #84481A;
+}
+.bug{
+    background: #b27d7b; /* Old browsers */
+    background: -moz-linear-gradient(top, #b27d7b 17%, #b55451 60%, #b63631 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b27d7b 17%,#b55451 60%,#b63631 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b27d7b 17%,#b55451 60%,#b63631 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b27d7b', endColorstr='#b63631',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #B51913;
+}
+.fairy{
+    background: #e8a0e4; /* Old browsers */
+    background: -moz-linear-gradient(top, #e8a0e4 0%, #e886e3 51%, #e85fe1 68%, #e84ce0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e8a0e4 0%,#e886e3 51%,#e85fe1 68%,#e84ce0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e8a0e4 0%,#e886e3 51%,#e85fe1 68%,#e84ce0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8a0e4', endColorstr='#e84ce0',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #E53BDA;
+}
+.fighting{
+    background: #e0cba6; /* Old browsers */
+    background: -moz-linear-gradient(top, #e0cba6 0%, #e0b669 43%, #e0ad4e 78%, #e0a538 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e0cba6 0%,#e0b669 43%,#e0ad4e 78%,#e0a538 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e0cba6 0%,#e0b669 43%,#e0ad4e 78%,#e0a538 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0cba6', endColorstr='#e0a538',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #DD9B2A;
+}
+.normal{
+    background: #798bc6; /* Old browsers */
+    background: -moz-linear-gradient(top,  #798bc6 17%, #4e69c9 60%, #3356c6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #798bc6 17%,#4e69c9 60%,#3356c6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #798bc6 17%,#4e69c9 60%,#3356c6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#798bc6', endColorstr='#3356c6',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #2D51C6;
+
+}
+.water{
+    background: #aed9e5; /* Old browsers */
+    background: -moz-linear-gradient(top, #aed9e5 17%, #77cde5 60%, #54c6e5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #aed9e5 17%,#77cde5 60%,#54c6e5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #aed9e5 17%,#77cde5 60%,#54c6e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aed9e5', endColorstr='#54c6e5',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #0DB8E2;
+}
+.flying{
+    background: #aed9e5; /* Old browsers */
+    background: -moz-linear-gradient(top, #aed9e5 17%, #61ccc8 60%, #39ccc7 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #aed9e5 17%,#61ccc8 60%,#39ccc7 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #aed9e5 17%,#61ccc8 60%,#39ccc7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aed9e5', endColorstr='#39ccc7',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #2ECCC4;
+}
+.psychic{
+    background: #cecece; /* Old browsers */
+    background: -moz-linear-gradient(top, #cecece 0%, #b7b7b7 34%, #969696 91%, #969696 91%, #808080 100%, #969696 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #cecece 0%,#b7b7b7 34%,#969696 91%,#969696 91%,#808080 100%,#969696 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #cecece 0%,#b7b7b7 34%,#969696 91%,#969696 91%,#808080 100%,#969696 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cecece', endColorstr='#969696',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #848484;
+}
+.rock{
+    background: #c1b199; /* Old browsers */
+    background: -moz-linear-gradient(top, #c1b199 0%, #c4a679 50%, #c49d62 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #c1b199 0%,#c4a679 50%,#c49d62 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #c1b199 0%,#c4a679 50%,#c49d62 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1b199', endColorstr='#c49d62',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #C18B3A;
+}
+.steel{
+    background: #e1e5eb; /* Old browsers */
+    background: -moz-linear-gradient(top, #e1e5eb 0%, #b9cdea 40%, #91b6ea 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e1e5eb 0%,#b9cdea 40%,#91b6ea 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e1e5eb 0%,#b9cdea 40%,#91b6ea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e5eb', endColorstr='#91b6ea',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #76A5E8;
+}
+.ice{
+    background: #b3c2d8; /* Old browsers */
+    background: -moz-linear-gradient(top, #b3c2d8 1%, #9cbbed 51%, #84a4d8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b3c2d8 1%,#9cbbed 51%,#84a4d8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b3c2d8 1%,#9cbbed 51%,#84a4d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3c2d8', endColorstr='#84a4d8',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #6691D6;
+}
+.ghost{
+    background: #fcfcfc; /* Old browsers */
+    background: -moz-linear-gradient(top, #fcfcfc 0%, #f7f7f7 20%, #f7f7f7 20%, #e8e8e8 51%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fcfcfc 0%,#f7f7f7 20%,#f7f7f7 20%,#e8e8e8 51%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fcfcfc 0%,#f7f7f7 20%,#f7f7f7 20%,#e8e8e8 51%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #D3D3D3;
+}
+.dragon{
+    background: #fcafa1; /* Old browsers */
+    background: -moz-linear-gradient(top, #fcafa1 1%, #fc755d 54%, #fc4120 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fcafa1 1%,#fc755d 54%,#fc4120 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fcafa1 1%,#fc755d 54%,#fc4120 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcafa1', endColorstr='#fc4120',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #F93618;
+}
+.dark{
+    background: #a8a8a8; /* Old browsers */
+    background: -moz-linear-gradient(top, #a8a8a8 0%, #9ea89a 50%, #83a877 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a8a8a8 0%,#9ea89a 50%,#83a877 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a8a8a8 0%,#9ea89a 50%,#83a877 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8a8a8', endColorstr='#83a877',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #70A55E;
+}
+.single-pokemon{
+    width: 240px;
+    height: 420px;
+    float: right;
+    border: 1px solid #000;
+    overflow-x: auto;
+    top: 50%;
+    position: absolute;
+    right: 70px;
+    margin-top: -210px;
+}
+.single-pokemon p:first-of-type{
+    font: 28px bolder; 
+    margin: 0;
+    margin-bottom: 8px;
+    margin-top: -22px;
+}
+.single-pokemon img{
+    width: 180px;
+    height: 180px;
+}
+table {
+    border-collapse: collapse;
+    width: 230px;
+    
+}
+table, td {
+    border: 1px solid black;
+}
+table tr td:first-of-type{
+    width: 180px;
+}
+
+
+/*MEDIA QUERIES*/
+
+
+@media screen and (max-width: 640px) and (min-width: 480px) {
+    img{
+        height: auto;
+        width: 100%;
+    }
+    .container{
+        width: 400px;*/
+    }
+    .pokemon{
+        width: 280px;
+    }
+    .single-pokemon{
+        right: 0;
+    }  
+}
+@media screen and (max-width: 480px) and (min-width: 320px) {
+    img{
+        height: auto;
+        width: 100%;
+    }
+    .container{
+        width: 395px;
+        margin: 0;
+    }
+    .pokemon{
+        width: 170px;
+    }
+    .inner{
+        width: 110px;
+        height: 150px;
+    }
+    button{
+        width: 260px;
+    }
+    .single-pokemon{
+        right: 0;
+    }  
+    h1{
+        padding: 2px 40px;
+    }
+}
+
+
