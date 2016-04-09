@@ -15,8 +15,7 @@ h1{
     font-size: 40px !important;
 }
 .container{
-/*    width: 800px;*/
-    width: 80%;
+    width: 800px;
     overflow: hidden;
     margin: 0 auto;
     text-align: center;
@@ -28,8 +27,7 @@ h1{
     clear: both;
 }
 .pokemon{
-/*    width: 520px;*/
-    width: 52%;
+    width: 520px;
     overflow: hidden;
     float: left;
 }
@@ -57,10 +55,9 @@ h1{
     cursor: pointer;
 }
 button{
-/*    width: 500px;*/
-    width: 49%;
+    width: 500px;
     height: 60px;
-    border-radius: 10px;
+    border-radius: 6px;
     background-color: dodgerblue;
     color: #fff;
     margin-top: 20px;
@@ -231,9 +228,9 @@ p.type{
     float: right;
     border: 1px solid #000;
     overflow-x: auto;
-    top: 50%;
+    top:50%;
     position: absolute;
-    right: 70px;
+    right: 20px;
     margin-top: -210px;
 }
 .single-pokemon p:first-of-type{
@@ -261,17 +258,32 @@ table tr td:first-of-type{
 
 /*MEDIA QUERIES*/
 
-
+@media screen and (max-width: 900px) and (min-width: 640px) {
+    img{
+        height: auto;
+        width: 100%;
+    }
+    .container{
+        width: 600px;
+    }
+    .pokemon{
+        width: 420px;
+    }
+    
+}
 @media screen and (max-width: 640px) and (min-width: 480px) {
     img{
         height: auto;
         width: 100%;
     }
     .container{
-        width: 400px;*/
+        width: 400px;
     }
     .pokemon{
         width: 280px;
+    }
+    button{
+        width: 200px;
     }
     .single-pokemon{
         right: 0;
@@ -283,7 +295,7 @@ table tr td:first-of-type{
         width: 100%;
     }
     .container{
-        width: 395px;
+        width: 400px;
         margin: 0;
     }
     .pokemon{
@@ -303,5 +315,4 @@ table tr td:first-of-type{
         padding: 2px 40px;
     }
 }
-
 
