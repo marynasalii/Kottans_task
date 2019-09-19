@@ -6,6 +6,3 @@ version 0.15.1.
 
 Hi, guys! 
 You can run my project by opening index.html that is located in app folder.
-
-Thanks for attention
-ps. I also make it with adaptive styling
